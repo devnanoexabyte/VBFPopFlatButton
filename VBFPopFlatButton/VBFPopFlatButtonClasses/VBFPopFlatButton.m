@@ -359,8 +359,11 @@
             firstOriginPoint.x -= offsetAmount;
             secondOriginPoint.x += offsetAmount;
             break;
-
-
+        case buttonBackArrowType:
+            [self.firstSegment moveToState:doubleSegmentLessThanState animated:self.animateToStartPosition];
+            [self.secondSegment moveToState:doubleSegmentMinusState animated:self.animateToStartPosition];
+            firstOriginPoint.x = 0.0f;
+            break;
         default:
             break;
     }
